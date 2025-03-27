@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom animations */
+.animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-slide-up {
+    animation: slideUp 1s ease-out forwards;
+}
+
+/* Smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Initial state for animated elements */
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(1rem);
+}
+
+/* Intersection Observer animation class */
+.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Hide default cursor */
+* {
+    cursor: none !important;
+}
+
+/* Trail animation */
+.trail-path {
+    animation: fadeOut 2s linear forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Center portrait images */
+.portrait-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
