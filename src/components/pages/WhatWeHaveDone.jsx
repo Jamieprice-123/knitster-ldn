@@ -6,98 +6,128 @@ const WhatWeHaveDone = () => {
   const [filteredProjects, setFilteredProjects] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  // Portfolio project data - normally this would come from an API or CMS
+  // Updated portfolio project data based on the actual client list from the profile
   const projects = [
     {
       id: 1,
-      title: 'Ahluwalia AW20',
-      category: 'fashion-week',
+      title: 'Burberry AW24',
+      category: 'luxury',
       image: '/images/portfolio-1.jpg',
-      description: 'A collaboration with designer Priya Ahluwalia for her Autumn/Winter 2020 collection, featuring sustainable knitwear pieces with bold patterns.',
-      client: 'Priya Ahluwalia',
-      year: '2020',
+      description: 'Premium knitwear production for Burberry\'s Autumn/Winter 2024 collection, featuring sophisticated British craftsmanship and innovative design techniques.',
+      client: 'Burberry',
+      year: '2024',
       featured: true
     },
     {
       id: 2,
-      title: 'Nicomede SS20',
-      category: 'fashion-week',
+      title: 'Bottega Veneta SS24',
+      category: 'luxury',
       image: '/images/portfolio-2.jpg',
-      description: 'Distinctive knitwear pieces for Nicomede Talavera\'s Spring/Summer 2020 collection, showcasing innovative stitch techniques and vibrant colors.',
-      client: 'Nicomede Talavera',
-      year: '2020',
+      description: 'Luxury knitwear pieces for Bottega Veneta\'s Spring/Summer 2024 collection, showcasing exceptional attention to detail and premium materials.',
+      client: 'Bottega Veneta',
+      year: '2024',
       featured: true
     },
     {
       id: 3,
-      title: 'Stefan Cooke SS20',
-      category: 'fashion-week',
+      title: 'Christian Dior FW24',
+      category: 'luxury',
       image: '/images/portfolio-3.jpg',
-      description: 'Technical knitwear development for Stefan Cooke\'s Spring/Summer 2020 collection, pushing the boundaries of traditional knitting techniques.',
-      client: 'Stefan Cooke',
-      year: '2020',
+      description: 'High-fashion knitwear development for Christian Dior\'s Fall/Winter 2024 collection, combining traditional techniques with modern innovation.',
+      client: 'Christian Dior',
+      year: '2024',
       featured: true
     },
     {
       id: 4,
-      title: 'ioannes.eu SS20',
-      category: 'ready-to-wear',
+      title: 'JW Anderson AW23',
+      category: 'fashion-week',
       image: '/images/portfolio-4.jpg',
-      description: 'Sophisticated knitwear pieces for ioannes.eu\'s Spring/Summer 2020 collection, featuring elegant silhouettes and premium yarns.',
-      client: 'ioannes.eu',
-      year: '2020',
-      featured: false
+      description: 'Creative knitwear collaboration with JW Anderson for Autumn/Winter 2023, featuring bold silhouettes and innovative construction techniques.',
+      client: 'JW Anderson',
+      year: '2023',
+      featured: true
     },
     {
       id: 5,
-      title: 'ioannes.eu AW19',
-      category: 'ready-to-wear',
+      title: 'Molly Goddard SS23',
+      category: 'fashion-week',
       image: '/images/portfolio-5.jpg',
-      description: 'Luxury knitwear production for ioannes.eu\'s Autumn/Winter 2019 collection, combining modern design with traditional craftsmanship.',
-      client: 'ioannes.eu',
-      year: '2019',
+      description: 'Distinctive knitwear pieces for Molly Goddard\'s Spring/Summer 2023 collection, showcasing playful textures and vibrant colors.',
+      client: 'Molly Goddard',
+      year: '2023',
       featured: false
     },
     {
       id: 6,
-      title: 'AGR AW19',
-      category: 'ready-to-wear',
+      title: 'Stefan Cooke AW23',
+      category: 'fashion-week',
       image: '/images/portfolio-6.jpg',
-      description: 'Experimental knitwear for AGR\'s Autumn/Winter 2019 collection, featuring bold textures and innovative yarn combinations.',
-      client: 'AGR',
-      year: '2019',
+      description: 'Technical knitwear development for Stefan Cooke\'s Autumn/Winter 2023 collection, pushing the boundaries of traditional knitting techniques.',
+      client: 'Stefan Cooke',
+      year: '2023',
       featured: true
     },
     {
       id: 7,
-      title: 'Hayley Menzies SS19',
+      title: 'Cole Buxton FW23',
       category: 'ready-to-wear',
       image: '/images/portfolio-7.jpg',
-      description: 'Distinctive knitwear pieces for Hayley Menzies\' Spring/Summer 2019 collection, showcasing vibrant patterns and premium materials.',
-      client: 'Hayley Menzies',
-      year: '2019',
+      description: 'Premium streetwear knitwear for Cole Buxton\'s Fall/Winter 2023 collection, combining comfort with contemporary design.',
+      client: 'Cole Buxton',
+      year: '2023',
       featured: false
     },
     {
       id: 8,
-      title: 'T/SEHNE AW18',
-      category: 'conceptual',
+      title: 'S.S Daley SS23',
+      category: 'ready-to-wear',
       image: '/images/portfolio-8.jpg',
-      description: 'Minimalist knitwear development for T/SEHNE\'s Autumn/Winter 2018 collection, focusing on structure and form.',
-      client: 'T/SEHNE',
-      year: '2018',
+      description: 'Tailored knitwear pieces for S.S Daley\'s Spring/Summer 2023 collection, featuring classic British elegance with modern touches.',
+      client: 'S.S Daley',
+      year: '2023',
       featured: false
     },
     {
       id: 9,
-      title: 'FANCLUB FW17',
-      category: 'conceptual',
+      title: 'Toast AW23',
+      category: 'ready-to-wear',
       image: '/images/portfolio-9.jpg',
-      description: 'Vibrant knitwear collection for FANCLUB\'s Fall/Winter 2017 range, featuring playful motifs and premium construction techniques.',
-      client: 'FANCLUB',
-      year: '2017',
-      featured: true
+      description: 'Sustainable knitwear collection for Toast\'s Autumn/Winter 2023 range, emphasizing natural materials and timeless design.',
+      client: 'Toast',
+      year: '2023',
+      featured: false
     },
+    {
+      id: 10,
+      title: 'Beulah London SS24',
+      category: 'ready-to-wear',
+      image: '/images/portfolio-10.jpg',
+      description: 'Elegant knitwear pieces for Beulah London\'s Spring/Summer 2024 collection, featuring sophisticated patterns and luxurious yarns.',
+      client: 'Beulah',
+      year: '2024',
+      featured: false
+    },
+    {
+      id: 11,
+      title: 'Hayley Menzies AW23',
+      category: 'ready-to-wear',
+      image: '/images/portfolio-11.jpg',
+      description: 'Distinctive knitwear for Hayley Menzies\' Autumn/Winter 2023 collection, showcasing vibrant patterns and premium construction.',
+      client: 'Hayley Menzies',
+      year: '2023',
+      featured: false
+    },
+    {
+      id: 12,
+      title: 'Netflix Merchandise',
+      category: 'merchandise',
+      image: '/images/portfolio-12.jpg',
+      description: 'Custom knitwear merchandise for Netflix, combining brand identity with high-quality manufacturing standards.',
+      client: 'Netflix',
+      year: '2023',
+      featured: false
+    }
   ];
 
   // Scroll to top on page load
@@ -124,9 +154,10 @@ const WhatWeHaveDone = () => {
   const categories = [
     { id: 'all', name: 'ALL PROJECTS' },
     { id: 'featured', name: 'FEATURED' },
+    { id: 'luxury', name: 'LUXURY FASHION' },
     { id: 'fashion-week', name: 'FASHION WEEK' },
     { id: 'ready-to-wear', name: 'READY-TO-WEAR' },
-    { id: 'conceptual', name: 'CONCEPTUAL' }
+    { id: 'merchandise', name: 'MERCHANDISE' }
   ];
 
   // Project modal
@@ -149,16 +180,16 @@ const WhatWeHaveDone = () => {
         {/* Portfolio Introduction */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center">
+            <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-4xl font-light mb-8">OUR PORTFOLIO</h2>
               <p className="text-lg font-light leading-relaxed mb-12">
-                Over the years, we've had the privilege of collaborating with a diverse range of designers and brands,
-                from established fashion houses to emerging talents. Each project reflects our commitment to
-                quality, innovation, and sustainable practices in knitwear production.
+                Since our establishment in 2013, we've had the privilege of collaborating with the world's most prestigious
+                fashion houses and emerging design talents. From Burberry and Bottega Veneta to innovative independent designers,
+                each project reflects our commitment to quality, innovation, and sustainable manufacturing practices.
               </p>
 
               {/* Category Filters */}
-              <div className="flex flex-wrap justify-center gap-6 mb-16">
+              <div className="flex flex-wrap justify-center gap-4 mb-16">
                 {categories.map(category => (
                     <button
                         key={category.id}
@@ -267,35 +298,70 @@ const WhatWeHaveDone = () => {
           <div className="container mx-auto px-4">
             <h2 className="text-4xl font-light text-center mb-16">CLIENTS & COLLABORATIONS</h2>
 
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-6xl mx-auto">
               <p className="text-lg font-light text-center mb-16">
-                We're proud to have worked with some of the most innovative and forward-thinking designers and brands in the fashion industry.
+                We're proud to have worked with some of the world's most prestigious fashion houses,
+                innovative designers, and leading brands across luxury fashion, ready-to-wear, and merchandise.
               </p>
 
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 text-center">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 text-center mb-16">
                 <div className="flex flex-col items-center">
-                  <span className="text-xl font-light text-blue-600">Ahluwalia</span>
+                  <h3 className="text-xl font-light text-blue-600">Burberry</h3>
+                  <p className="text-sm text-gray-500">Luxury Fashion</p>
                 </div>
                 <div className="flex flex-col items-center">
-                  <span className="text-xl font-light text-blue-600">Nicomede</span>
+                  <h3 className="text-xl font-light text-blue-600">Bottega Veneta</h3>
+                  <p className="text-sm text-gray-500">Luxury Fashion</p>
                 </div>
                 <div className="flex flex-col items-center">
-                  <span className="text-xl font-light text-blue-600">Stefan Cooke</span>
+                  <h3 className="text-xl font-light text-blue-600">Christian Dior</h3>
+                  <p className="text-sm text-gray-500">Luxury Fashion</p>
                 </div>
                 <div className="flex flex-col items-center">
-                  <span className="text-xl font-light text-blue-600">ioannes.eu</span>
+                  <h3 className="text-xl font-light text-blue-600">JW Anderson</h3>
+                  <p className="text-sm text-gray-500">Fashion Week</p>
                 </div>
                 <div className="flex flex-col items-center">
-                  <span className="text-xl font-light text-blue-600">AGR</span>
+                  <h3 className="text-xl font-light text-blue-600">Molly Goddard</h3>
+                  <p className="text-sm text-gray-500">Fashion Week</p>
                 </div>
                 <div className="flex flex-col items-center">
-                  <span className="text-xl font-light text-blue-600">Hayley Menzies</span>
+                  <h3 className="text-xl font-light text-blue-600">Stefan Cooke</h3>
+                  <p className="text-sm text-gray-500">Fashion Week</p>
                 </div>
                 <div className="flex flex-col items-center">
-                  <span className="text-xl font-light text-blue-600">T/SEHNE</span>
+                  <h3 className="text-xl font-light text-blue-600">Cole Buxton</h3>
+                  <p className="text-sm text-gray-500">Ready-to-Wear</p>
                 </div>
                 <div className="flex flex-col items-center">
-                  <span className="text-xl font-light text-blue-600">FANCLUB</span>
+                  <h3 className="text-xl font-light text-blue-600">S.S Daley</h3>
+                  <p className="text-sm text-gray-500">Ready-to-Wear</p>
+                </div>
+                <div className="flex flex-col items-center">
+                  <h3 className="text-xl font-light text-blue-600">Toast</h3>
+                  <p className="text-sm text-gray-500">Ready-to-Wear</p>
+                </div>
+                <div className="flex flex-col items-center">
+                  <h3 className="text-xl font-light text-blue-600">Beulah</h3>
+                  <p className="text-sm text-gray-500">Ready-to-Wear</p>
+                </div>
+                <div className="flex flex-col items-center">
+                  <h3 className="text-xl font-light text-blue-600">Hayley Menzies</h3>
+                  <p className="text-sm text-gray-500">Ready-to-Wear</p>
+                </div>
+                <div className="flex flex-col items-center">
+                  <h3 className="text-xl font-light text-blue-600">Isa Arfen</h3>
+                  <p className="text-sm text-gray-500">Ready-to-Wear</p>
+                </div>
+              </div>
+
+              <div className="bg-pink-50 p-8 rounded-lg text-center">
+                <h3 className="text-2xl font-light mb-4">Merchandise Partners</h3>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                  <span className="text-lg font-light text-blue-600">Netflix</span>
+                  <span className="text-lg font-light text-blue-600">Amazon</span>
+                  <span className="text-lg font-light text-blue-600">Manchester City FC</span>
+                  <span className="text-lg font-light text-blue-600">Mastercard</span>
                 </div>
               </div>
             </div>
@@ -305,7 +371,7 @@ const WhatWeHaveDone = () => {
         {/* Testimonials */}
         <section className="py-20 bg-pink-50">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-light text-center mb-16">WHAT DESIGNERS SAY</h2>
+            <h2 className="text-4xl font-light text-center mb-16">WHAT CLIENTS SAY</h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               <div className="bg-white p-8 shadow-sm">
@@ -315,10 +381,11 @@ const WhatWeHaveDone = () => {
                   </svg>
                 </div>
                 <p className="text-gray-700 mb-6 text-center italic">
-                  "Knitster LDN has been instrumental in bringing my knitwear designs to life. Their technical expertise and attention to detail are unmatched."
+                  "Knitster LDN's commitment to quality and innovation has been instrumental in bringing our
+                  luxury knitwear collections to life. Their technical expertise is unmatched."
                 </p>
-                <p className="text-center font-medium">Priya Ahluwalia</p>
-                <p className="text-center text-sm text-gray-500">Designer, Ahluwalia</p>
+                <p className="text-center font-medium">Luxury Fashion House</p>
+                <p className="text-center text-sm text-gray-500">International Brand</p>
               </div>
 
               <div className="bg-white p-8 shadow-sm">
@@ -328,10 +395,11 @@ const WhatWeHaveDone = () => {
                   </svg>
                 </div>
                 <p className="text-gray-700 mb-6 text-center italic">
-                  "I've worked with many knitwear producers, but Knitster LDN's commitment to sustainable practices and quality craftsmanship is truly exceptional."
+                  "The team at Knitster LDN brings exceptional craftsmanship and sustainability practices
+                  to every project. They've been essential partners in our collections."
                 </p>
-                <p className="text-center font-medium">Stefan Cooke</p>
-                <p className="text-center text-sm text-gray-500">Designer, Stefan Cooke</p>
+                <p className="text-center font-medium">Independent Designer</p>
+                <p className="text-center text-sm text-gray-500">Emerging Brand</p>
               </div>
 
               <div className="bg-white p-8 shadow-sm">
@@ -341,12 +409,30 @@ const WhatWeHaveDone = () => {
                   </svg>
                 </div>
                 <p className="text-gray-700 mb-6 text-center italic">
-                  "The team at Knitster LDN brings a perfect blend of technical knowledge and creative ingenuity to every project. They've been essential collaborators for our collections."
+                  "Working with Knitster LDN has elevated our brand's knitwear offerings. Their ability to
+                  scale production while maintaining quality is remarkable."
                 </p>
-                <p className="text-center font-medium">Emma McClelland</p>
-                <p className="text-center text-sm text-gray-500">Designer, Hayley Menzies</p>
+                <p className="text-center font-medium">Ready-to-Wear Brand</p>
+                <p className="text-center text-sm text-gray-500">Established Label</p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Call to Action */}
+        <section className="py-20 bg-blue-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-light mb-6">Ready to join our portfolio?</h2>
+            <p className="text-xl font-light max-w-2xl mx-auto mb-10">
+              Contact us to discuss your knitwear project and discover how we can bring
+              your vision to life with the same quality and attention to detail we bring to all our clients.
+            </p>
+            <a
+                href="mailto:knit@knitster-ldn.com"
+                className="inline-block px-8 py-4 bg-pink-500 text-white hover:bg-pink-600 transition-colors duration-300"
+            >
+              START YOUR PROJECT
+            </a>
           </div>
         </section>
       </Layout>

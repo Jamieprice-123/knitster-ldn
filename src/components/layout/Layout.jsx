@@ -14,24 +14,23 @@ const Layout = ({ children }) => {
   const navigate = useNavigate();
 
   const portfolioItems = [
-    { image: '/images/portfolio-1.jpg', title: 'Ahluwalia AW20' },
-    { image: '/images/portfolio-2.jpg', title: 'Nicomede SS20' },
-    { image: '/images/portfolio-3.jpg', title: 'Stefan Cooke SS20' },
-    { image: '/images/portfolio-4.jpg', title: 'ioannes.eu SS20' },
-    { image: '/images/portfolio-5.jpg', title: 'ioannes.eu AW19' },
-    { image: '/images/portfolio-6.jpg', title: 'AGR AW19' },
-    { image: '/images/portfolio-7.jpg', title: 'Hayley Menzies SS19' },
-    { image: '/images/portfolio-8.jpg', title: 'T/SEHNE AW18' },
-    { image: '/images/portfolio-9.jpg', title: 'FANCLUB FW17' },
+    { image: '/images/portfolio-1.jpg', title: 'Burberry AW24' },
+    { image: '/images/portfolio-2.jpg', title: 'Bottega Veneta SS24' },
+    { image: '/images/portfolio-3.jpg', title: 'Christian Dior FW24' },
+    { image: '/images/portfolio-4.jpg', title: 'JW Anderson AW23' },
+    { image: '/images/portfolio-5.jpg', title: 'Molly Goddard SS23' },
+    { image: '/images/portfolio-6.jpg', title: 'Stefan Cooke AW23' },
+    { image: '/images/portfolio-7.jpg', title: 'Cole Buxton FW23' },
+    { image: '/images/portfolio-8.jpg', title: 'S.S Daley SS23' },
+    { image: '/images/portfolio-9.jpg', title: 'Toast AW23' },
   ];
 
-  // Updated menu items with the new routes
+  // Updated menu items - removed Yarn Tools
   const menuItems = [
     { title: 'WHAT WE DO', href: '/what-we-do' },
     { title: 'WHAT WE HAVE DONE', href: '/portfolio' },
     { title: 'WHO WE ARE', href: '/about' },
     { title: 'SUSTAINABILITY', href: '/sustainability' },
-    { title: 'YARN TOOLS', href: '/yarn-tools' },
     { title: 'SHOP', href: 'https://www.shopify.com/uk' },
   ];
 
