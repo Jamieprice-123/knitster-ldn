@@ -1,37 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import CustomCursor from './CustomCursor';
-import Header from './Header';
-import Menu from './Menu';
 import Footer from './Footer';
-import Contact from './Contact';
-import Home from './Home';
+import { Link, useLocation } from 'react-router-dom';
 
 const Layout = ({ children }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const navigate = useNavigate();
+  const location = useLocation();
 
-  const portfolioItems = [
-    { image: '/images/portfolio-1.jpg', title: 'Burberry AW24' },
-    { image: '/images/portfolio-2.jpg', title: 'Bottega Veneta SS24' },
-    { image: '/images/portfolio-3.jpg', title: 'Christian Dior FW24' },
-    { image: '/images/portfolio-4.jpg', title: 'JW Anderson AW23' },
-    { image: '/images/portfolio-5.jpg', title: 'Molly Goddard SS23' },
-    { image: '/images/portfolio-6.jpg', title: 'Stefan Cooke AW23' },
-    { image: '/images/portfolio-7.jpg', title: 'Cole Buxton FW23' },
-    { image: '/images/portfolio-8.jpg', title: 'S.S Daley SS23' },
-    { image: '/images/portfolio-9.jpg', title: 'Toast AW23' },
-  ];
-
-  // Updated menu items - removed Yarn Tools
-  const menuItems = [
-    { title: 'WHAT WE DO', href: '/what-we-do' },
-    { title: 'WHAT WE HAVE DONE', href: '/portfolio' },
-    { title: 'WHO WE ARE', href: '/about' },
-    { title: 'SUSTAINABILITY', href: '/sustainability' },
-    { title: 'SHOP', href: 'https://www.shopify.com/uk' },
+  const navItems = [
+    { name: 'Our Values', path: '/our-values' },
+    { name: 'In House Production', path: '/in-house-production' },
+    { name: 'Yarn Store', path: '/yarn-store' },
+    { name: 'Design & Development', path: '/design-development' },
+    { name: 'Overseas Production', path: '/overseas-production' },
+    { name: 'Contact', path: '/contact' }
   ];
 
   useEffect(() => {
@@ -41,45 +23,85 @@ const Layout = ({ children }) => {
 
     window.addEventListener('scroll', handleScroll);
 
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % portfolioItems.length);
-    }, 3000);
-
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      clearInterval(interval);
     };
-  }, [portfolioItems.length]);
-
-  const handleNavigation = (path) => {
-    setIsMenuOpen(false);
-    if (path.startsWith('http')) {
-      window.open(path, '_blank', 'noopener,noreferrer');
-    } else {
-      navigate(path);
-    }
-  };
+  }, []);
 
   return (
       <div className="min-h-screen bg-pink-50">
         <CustomCursor />
 
-        <Header scrolled={scrolled} setIsMenuOpen={setIsMenuOpen} />
+        {/* Header */}
+        <header className={`fixed w-full z-50 transition-all duration-300 ${
+            scrolled ? 'bg-pink-50 shadow-md' : 'bg-transparent'
+        }`}>
+          <div className="container mx-auto px-4 py-4">
+            <div className="flex justify-between items-center">
+              {/* Logo */}
+              <div className="text-2xl font-bold">
+                <Link to="/">
+                  <img src="/images/logo.png" alt="Knitster LDN" className="h-12" />
+                </Link>
+              </div>
 
-        <Menu
-            isMenuOpen={isMenuOpen}
-            setIsMenuOpen={setIsMenuOpen}
-            menuItems={menuItems}
-            handleNavigation={handleNavigation}
-        />
+              {/* Navigation */}
+              <nav className="hidden md:flex items-center space-x-8">
+                {navItems.map((item) => (
+                    <Link
+                        key={item.path}
+                        to={item.path}
+                        className={`text-sm font-light transition-colors ${
+                            location.pathname === item.path
+                                ? 'text-blue-600 font-medium'
+                                : scrolled
+                                    ? 'text-gray-800 hover:text-blue-600'
+                                    : 'text-white hover:text-pink-200'
+                        }`}
+                    >
+                      {item.name}
+                    </Link>
+                ))}
+              </nav>
+
+              {/* Mobile menu button */}
+              <div className="md:hidden">
+                <Link
+                    to="/contact"
+                    className={`text-sm font-light ${
+                        scrolled ? 'text-gray-800' : 'text-white'
+                    }`}
+                >
+                  Contact
+                </Link>
+              </div>
+            </div>
+
+            {/* Mobile Navigation */}
+            <nav className="md:hidden mt-4 pb-4 space-y-2">
+              {navItems.map((item) => (
+                  <Link
+                      key={item.path}
+                      to={item.path}
+                      className={`block text-sm font-light py-2 ${
+                          location.pathname === item.path
+                              ? 'text-blue-600 font-medium'
+                              : scrolled
+                                  ? 'text-gray-800'
+                                  : 'text-white'
+                      }`}
+                  >
+                    {item.name}
+                  </Link>
+              ))}
+            </nav>
+          </div>
+        </header>
 
         <main>
-          {children ? children : (
-              <Home currentSlide={currentSlide} portfolioItems={portfolioItems} />
-          )}
+          {children}
         </main>
 
-        <Contact />
         <Footer />
       </div>
   );
