@@ -57,7 +57,7 @@ const OverseasProduction = () => {
                                     <path d="M24 4L8 12V22C8 32 14.4 41.2 24 44C33.6 41.2 40 32 40 22V12L24 4ZM24 22H36C35.2 29.6 30.4 36.4 24 39.2V24H12V14L24 8V22Z" fill="#FF69B4"/>
                                 </svg>
                             </div>
-                            <h3 className="text-2xl font-light mb-4 text-blue-600">LARGER VOLUMES</h3>
+                            <h3 className="text-2xl font-light mb-4 text-[#90172a]">LARGER VOLUMES</h3>
                             <p className="text-gray-700">
                                 For orders exceeding our 20,000-piece annual London capacity, our overseas partners
                                 provide the infrastructure to scale production efficiently.
@@ -360,7 +360,7 @@ const OverseasProduction = () => {
             </section>
 
             {/* Call to Action */}
-            <section className="py-20 bg-blue-600 text-white">
+            <section className="py-20 bg-[#90172a] text-white">
                 <div className="container mx-auto px-4 text-center">
                     <h2 className="text-3xl font-light mb-6">Explore Overseas Production Options</h2>
                     <p className="text-xl font-light max-w-2xl mx-auto mb-10">

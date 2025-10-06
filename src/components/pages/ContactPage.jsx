@@ -32,14 +32,14 @@ const ContactPage = () => {
                                     <path d="M30 50 Q50 20 70 50 Q50 80 30 50" fill="white" />
                                 </svg>
                             </div>
-                            <h2 className="text-4xl font-light text-blue-600">Get in touch to schedule an appointment</h2>
+                            <h2 className="text-4xl font-light text-[#90172a]">Get in touch to schedule an appointment</h2>
                         </div>
 
                         {/* Main Contact Info */}
                         <div className="space-y-3 mb-12">
                             <a
                                 href="mailto:knit@knitster-ldn.com"
-                                className="text-xl text-blue-600 hover:text-blue-700 transition-colors block"
+                                className="text-xl text-blue-600 hover:text-[#90172a] transition-colors block"
                             >
                                 knit@knitster-ldn.com
                             </a>
@@ -49,7 +49,7 @@ const ContactPage = () => {
                             </div>
                             <a
                                 href="tel:+442089881768"
-                                className="text-lg text-blue-600 hover:text-blue-700 transition-colors block"
+                                className="text-lg text-blue-600 hover:text-[#90172a] transition-colors block"
                             >
                                 +44 (0) 208 988 1768
                             </a>

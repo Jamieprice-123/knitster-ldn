@@ -33,9 +33,6 @@ const Footer = () => {
           <a href="https://www.instagram.com/knitster_ldn/?hl=en" target="_blank" rel="noopener noreferrer">
             <Instagram className="h-8 w-8 cursor-pointer hover:text-gray-600 transition-colors" />
           </a>
-          <a href="https://twitter.com/knitster_online" target="_blank" rel="noopener noreferrer">
-            <Twitter className="h-8 w-8 cursor-pointer hover:text-gray-600 transition-colors" />
-          </a>
         </div>
 
         {/* Copyright */}

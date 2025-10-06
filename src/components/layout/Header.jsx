@@ -5,12 +5,12 @@ const Header = ({ scrolled }) => {
   const location = useLocation();
 
   const navItems = [
-    { name: 'Our Values', path: '/our-values' },
-    { name: 'In House Production', path: '/in-house-production' },
-    { name: 'Yarn Store', path: '/yarn-store' },
     { name: 'Design & Development', path: '/design-development' },
+    { name: 'Portfolio', path: '/portfolio' },
+    { name: 'Made In London', path: '/made-in-london' },
     { name: 'Overseas Production', path: '/overseas-production' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'Knit Store', path: '/knit-store' },
+    { name: 'Our Values', path: '/our-values' }
   ];
 
   return (
