@@ -14,10 +14,10 @@ function App() {
     return (
         <Router>
             <Routes>
-                {/* Home page - simple hero only */}
+                {/* Home page - simple hero with clickable logo */}
                 <Route path="/" element={<Home />} />
 
-                {/* Main navigation pages - new order */}
+                {/* Main navigation pages */}
                 <Route path="/design-development" element={<DesignAndDevelopment />} />
                 <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="/made-in-london" element={<MadeInLondon />} />

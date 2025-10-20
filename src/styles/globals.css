@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Apply Poppins globally */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
 /* Custom animations */
 .animate-fade-in {
     animation: fadeIn 1s ease-out forwards;
@@ -9,6 +17,26 @@
 
 .animate-slide-up {
     animation: slideUp 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Smooth scrolling for the whole page */

@@ -8,12 +8,13 @@ const Layout = ({ children }) => {
   const location = useLocation();
 
   const navItems = [
-    { name: 'Design & Development', path: '/design-development' },
-    { name: 'Portfolio', path: '/portfolio' },
-    { name: 'Made In London', path: '/made-in-london' },
-    { name: 'Overseas Production', path: '/overseas-production' },
-    { name: 'Knit Store', path: '/knit-store' },
-    { name: 'Our Values', path: '/our-values' }
+    { name: 'Design & Development', path: '/design-development', color: 'text-primary-red' },
+    { name: 'Portfolio', path: '/portfolio', color: 'text-primary-dark-red' },
+    { name: 'Made In London', path: '/made-in-london', color: 'text-background-cool-blue' },
+    { name: 'Overseas Production', path: '/overseas-production', color: 'text-accent-powder-green' },
+    { name: 'Knit Store', path: '/knit-store', color: 'text-primary-red' },
+    { name: 'Our Values', path: '/our-values', color: 'text-primary-dark-red' },
+    { name: 'Contact', path: '/contact', color: 'text-background-cool-blue' }
   ];
 
   useEffect(() => {
@@ -34,28 +35,28 @@ const Layout = ({ children }) => {
 
         {/* Header */}
         <header className={`fixed w-full z-50 transition-all duration-300 ${
-            scrolled ? 'bg-pink-50 shadow-md' : 'bg-transparent'
+            scrolled ? 'bg-white shadow-md' : 'bg-transparent'
         }`}>
-          <div className="container mx-auto px-4 py-4">
+          <div className="container mx-auto px-6 py-6">
             <div className="flex justify-between items-center">
               {/* Logo */}
-              <div className="text-2xl font-bold">
+              <div>
                 <Link to="/">
-                  <img src="/images/logo.png" alt="Knitster LDN" className="h-12" />
+                  <img src="/images/logo.png" alt="Knitster LDN" className="h-16" />
                 </Link>
               </div>
 
               {/* Navigation */}
-              <nav className="hidden md:flex items-center space-x-8">
+              <nav className="hidden lg:flex items-center space-x-8">
                 {navItems.map((item) => (
                     <Link
                         key={item.path}
                         to={item.path}
-                        className={`text-sm font-light transition-colors ${
+                        className={`font-poppins font-semibold text-h3 leading-[15pt] transition-colors ${
                             location.pathname === item.path
-                                ? 'text-blue-600 font-medium'
+                                ? item.color
                                 : scrolled
-                                    ? 'text-gray-800 hover:text-blue-600'
+                                    ? 'text-gray-800 hover:' + item.color
                                     : 'text-white hover:text-pink-200'
                         }`}
                     >
@@ -65,10 +66,10 @@ const Layout = ({ children }) => {
               </nav>
 
               {/* Mobile menu button */}
-              <div className="md:hidden">
+              <div className="lg:hidden">
                 <Link
                     to="/contact"
-                    className={`text-sm font-light ${
+                    className={`font-poppins font-semibold text-h3 ${
                         scrolled ? 'text-gray-800' : 'text-white'
                     }`}
                 >
@@ -78,14 +79,14 @@ const Layout = ({ children }) => {
             </div>
 
             {/* Mobile Navigation */}
-            <nav className="md:hidden mt-4 pb-4 space-y-2">
+            <nav className="lg:hidden mt-4 pb-4 space-y-3">
               {navItems.map((item) => (
                   <Link
                       key={item.path}
                       to={item.path}
-                      className={`block text-sm font-light py-2 ${
+                      className={`block font-poppins font-semibold text-h3 py-2 ${
                           location.pathname === item.path
-                              ? 'text-blue-600 font-medium'
+                              ? item.color
                               : scrolled
                                   ? 'text-gray-800'
                                   : 'text-white'
