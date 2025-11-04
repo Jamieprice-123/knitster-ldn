@@ -21,7 +21,7 @@ const Home = () => {
                                 className="h-32 mb-6 transition-all duration-300 hover:scale-105"
                             />
                             {!showInfo && (
-                                <p className="font-poppins font-light text-lg mt-4 opacity-75">Click for more information</p>
+                                <p className="font-poppins font-light text-body mt-4 opacity-75">Click for more information</p>
                             )}
                         </div>
 
@@ -30,15 +30,15 @@ const Home = () => {
                                 className="mt-8 max-w-3xl mx-auto px-4 animate-fade-in cursor-pointer"
                                 onClick={() => setShowInfo(false)}
                             >
-                                <p className="font-poppins font-normal text-body leading-[13pt] tracking-[0.01em] mb-6">
+                                <p className="font-poppins font-normal text-body mb-6">
                                     Established in 2013, Knitster LDN was founded with a clear mission: to produce
                                     exceptional quality knitwear with a focus on craftsmanship, innovation, and sustainability.
                                 </p>
-                                <p className="font-poppins font-normal text-body leading-[13pt] tracking-[0.01em] mb-6">
+                                <p className="font-poppins font-normal text-body mb-6">
                                     We believe in creating beautiful, well-made garments that stand the test of time,
                                     challenging the fast fashion mindset that has dominated the industry.
                                 </p>
-                                <p className="font-poppins font-normal text-body leading-[13pt] tracking-[0.01em]">
+                                <p className="font-poppins font-normal text-body">
                                     Our goal is to be at the forefront of knitwear manufacturing in the UK, supporting
                                     the British fashion industry and maintaining the highest standards of ethical production.
                                 </p>
@@ -48,8 +48,8 @@ const Home = () => {
 
                         {!showInfo && (
                             <>
-                                <p className="font-poppins font-light text-2xl mt-6">Luxury Knitwear Manufacturing</p>
-                                <p className="font-poppins font-light text-lg mt-4">Established 2013 • London, UK</p>
+                                <p className="font-poppins font-light text-h2 mt-6">Luxury Knitwear Manufacturing</p>
+                                <p className="font-poppins font-light text-body mt-4">Established 2013 • London, UK</p>
                             </>
                         )}
                     </div>

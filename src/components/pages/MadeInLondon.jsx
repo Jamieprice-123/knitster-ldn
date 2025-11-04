@@ -16,22 +16,22 @@ const MadeInLondon = () => {
                     className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                    <h1 className="font-poppins font-light text-h1 leading-[60pt] tracking-[-0.02em] text-white text-center px-4">
+                    <h1 className="font-poppins font-light text-h1 text-white text-center px-4">
                         MADE IN LONDON
                     </h1>
                 </div>
             </section>
 
             {/* Introduction */}
-            <section className="py-24 bg-white">
+            <section className="py-20 bg-white">
                 <div className="container mx-auto px-4">
-                    <div className="max-w-4xl mx-auto font-poppins font-normal text-body leading-[13pt] tracking-[0.01em] text-center">
-                        <p className="mb-8">
+                    <div className="max-w-4xl mx-auto font-poppins font-normal text-body text-center">
+                        <p className="mb-6">
                             Our London-based facility is the heart of Knitster LDN. Here, our dedicated team of 14 skilled
                             craftspeople produce up to 20,000 pieces of luxury knitwear annually, managing every stage from
                             initial concept to finished garment.
                         </p>
-                        <p className="mb-8">
+                        <p className="mb-6">
                             We specialize in mid to heavy gauge, fully fashioned knitwear, hand-finished with precision.
                             Using both Shima and Stoll technology, we combine traditional craftsmanship with modern efficiency.
                         </p>
@@ -43,12 +43,12 @@ const MadeInLondon = () => {
             {/* Production Capabilities */}
             <section className="py-16 bg-background-cool-blue">
                 <div className="container mx-auto px-4">
-                    <h2 className="font-poppins font-light text-h2 leading-[32pt] tracking-[-0.02em] text-center mb-16 text-primary-dark-red">
+                    <h2 className="font-poppins font-light text-h2 text-center mb-12 text-primary-dark-red">
                         PRODUCTION CAPABILITIES
                     </h2>
 
-                    <div className="grid md:grid-cols-4 gap-12 max-w-6xl mx-auto mb-16">
-                        <div className="text-center">
+                    <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto mb-12">
+                        <div className="text-center bg-white p-6 rounded-lg shadow-sm">
                             <div className="text-4xl font-light text-primary-red mb-4">20,000</div>
                             <h3 className="font-poppins font-semibold text-h3 mb-2 text-primary-dark-red">Annual Capacity</h3>
                             <p className="font-poppins font-normal text-sub text-gray-700">
@@ -56,7 +56,7 @@ const MadeInLondon = () => {
                             </p>
                         </div>
 
-                        <div className="text-center">
+                        <div className="text-center bg-white p-6 rounded-lg shadow-sm">
                             <div className="text-4xl font-light text-primary-red mb-4">14</div>
                             <h3 className="font-poppins font-semibold text-h3 mb-2 text-primary-dark-red">Team Members</h3>
                             <p className="font-poppins font-normal text-sub text-gray-700">
@@ -64,7 +64,7 @@ const MadeInLondon = () => {
                             </p>
                         </div>
 
-                        <div className="text-center">
+                        <div className="text-center bg-white p-6 rounded-lg shadow-sm">
                             <div className="text-4xl font-light text-primary-red mb-4">50</div>
                             <h3 className="font-poppins font-semibold text-h3 mb-2 text-primary-dark-red">MOQ</h3>
                             <p className="font-poppins font-normal text-sub text-gray-700">
@@ -72,7 +72,7 @@ const MadeInLondon = () => {
                             </p>
                         </div>
 
-                        <div className="text-center">
+                        <div className="text-center bg-white p-6 rounded-lg shadow-sm">
                             <div className="text-4xl font-light text-primary-red mb-4">2013</div>
                             <h3 className="font-poppins font-semibold text-h3 mb-2 text-primary-dark-red">Established</h3>
                             <p className="font-poppins font-normal text-sub text-gray-700">
@@ -84,17 +84,17 @@ const MadeInLondon = () => {
             </section>
 
             {/* Production Process */}
-            <section className="py-24 bg-white">
+            <section className="py-20 bg-white">
                 <div className="container mx-auto px-4">
-                    <h2 className="font-poppins font-light text-h2 leading-[32pt] tracking-[-0.02em] text-center mb-16 text-primary-dark-red">
+                    <h2 className="font-poppins font-light text-h2 text-center mb-12 text-primary-dark-red">
                         FROM CONCEPT TO COMPLETION
                     </h2>
 
                     <div className="max-w-6xl mx-auto">
-                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                            <div className="text-center">
+                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div className="text-center bg-accent-powder-green p-6 rounded-lg">
                                 <div className="flex justify-center mb-4">
-                                    <img src="/images/logo-stitches.png" alt="" className="w-12 h-12" />
+                                    <img src="/images/logo-stitches.png" alt="" className="h-12 w-auto object-contain" />
                                 </div>
                                 <h3 className="font-poppins font-semibold text-h3 mb-3 text-primary-red">
                                     BRIEFING & PLANNING
@@ -104,9 +104,9 @@ const MadeInLondon = () => {
                                 </p>
                             </div>
 
-                            <div className="text-center">
+                            <div className="text-center bg-accent-powder-green p-6 rounded-lg">
                                 <div className="flex justify-center mb-4">
-                                    <img src="/images/logo-stitches.png" alt="" className="w-12 h-12" />
+                                    <img src="/images/logo-stitches.png" alt="" className="h-12 w-auto object-contain" />
                                 </div>
                                 <h3 className="font-poppins font-semibold text-h3 mb-3 text-primary-red">
                                     DEVELOPMENT & PROGRAMMING
@@ -116,9 +116,9 @@ const MadeInLondon = () => {
                                 </p>
                             </div>
 
-                            <div className="text-center">
+                            <div className="text-center bg-accent-powder-green p-6 rounded-lg">
                                 <div className="flex justify-center mb-4">
-                                    <img src="/images/logo-stitches.png" alt="" className="w-12 h-12" />
+                                    <img src="/images/logo-stitches.png" alt="" className="h-12 w-auto object-contain" />
                                 </div>
                                 <h3 className="font-poppins font-semibold text-h3 mb-3 text-primary-red">
                                     PRODUCTION
@@ -128,9 +128,9 @@ const MadeInLondon = () => {
                                 </p>
                             </div>
 
-                            <div className="text-center">
+                            <div className="text-center bg-accent-powder-green p-6 rounded-lg">
                                 <div className="flex justify-center mb-4">
-                                    <img src="/images/logo-stitches.png" alt="" className="w-12 h-12" />
+                                    <img src="/images/logo-stitches.png" alt="" className="h-12 w-auto object-contain" />
                                 </div>
                                 <h3 className="font-poppins font-semibold text-h3 mb-3 text-primary-red">
                                     FINISHING & QC
@@ -145,17 +145,17 @@ const MadeInLondon = () => {
             </section>
 
             {/* Machinery & Equipment */}
-            <section className="py-24 bg-accent-powder-green">
+            <section className="py-20 bg-accent-powder-green">
                 <div className="container mx-auto px-4">
-                    <h2 className="font-poppins font-light text-h2 leading-[32pt] tracking-[-0.02em] text-center mb-16 text-primary-dark-red">
+                    <h2 className="font-poppins font-light text-h2 text-center mb-12 text-primary-dark-red">
                         MACHINERY & EQUIPMENT
                     </h2>
 
                     <div className="max-w-6xl mx-auto">
                         {/* Flat Bed Knitting Machines */}
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
-                            <div className="bg-white p-8 shadow-sm">
-                                <h3 className="font-poppins font-semibold text-h3 mb-4 text-primary-red">
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+                            <div className="bg-white p-6 rounded-lg shadow-sm">
+                                <h3 className="font-poppins font-semibold text-h3 mb-3 text-primary-red">
                                     Shima SES122 - 12gg
                                 </h3>
                                 <p className="font-poppins font-normal text-sub text-gray-700">
@@ -163,8 +163,8 @@ const MadeInLondon = () => {
                                 </p>
                             </div>
 
-                            <div className="bg-white p-8 shadow-sm">
-                                <h3 className="font-poppins font-semibold text-h3 mb-4 text-primary-red">
+                            <div className="bg-white p-6 rounded-lg shadow-sm">
+                                <h3 className="font-poppins font-semibold text-h3 mb-3 text-primary-red">
                                     Shima SIG123 - 7gg/5gg Multi
                                 </h3>
                                 <p className="font-poppins font-normal text-sub text-gray-700">
@@ -172,8 +172,8 @@ const MadeInLondon = () => {
                                 </p>
                             </div>
 
-                            <div className="bg-white p-8 shadow-sm">
-                                <h3 className="font-poppins font-semibold text-h3 mb-4 text-primary-red">
+                            <div className="bg-white p-6 rounded-lg shadow-sm">
+                                <h3 className="font-poppins font-semibold text-h3 mb-3 text-primary-red">
                                     Shima NSSR122 - 7gg/5gg Multi
                                 </h3>
                                 <p className="font-poppins font-normal text-sub text-gray-700">
@@ -181,8 +181,8 @@ const MadeInLondon = () => {
                                 </p>
                             </div>
 
-                            <div className="bg-white p-8 shadow-sm">
-                                <h3 className="font-poppins font-semibold text-h3 mb-4 text-primary-red">
+                            <div className="bg-white p-6 rounded-lg shadow-sm">
+                                <h3 className="font-poppins font-semibold text-h3 mb-3 text-primary-red">
                                     Shima SES122 - 3gg
                                 </h3>
                                 <p className="font-poppins font-normal text-sub text-gray-700">
@@ -190,8 +190,8 @@ const MadeInLondon = () => {
                                 </p>
                             </div>
 
-                            <div className="bg-white p-8 shadow-sm">
-                                <h3 className="font-poppins font-semibold text-h3 mb-4 text-primary-red">
+                            <div className="bg-white p-6 rounded-lg shadow-sm">
+                                <h3 className="font-poppins font-semibold text-h3 mb-3 text-primary-red">
                                     Stoll CMS530HP - 5gg
                                 </h3>
                                 <p className="font-poppins font-normal text-sub text-gray-700">
@@ -199,8 +199,8 @@ const MadeInLondon = () => {
                                 </p>
                             </div>
 
-                            <div className="bg-white p-8 shadow-sm">
-                                <h3 className="font-poppins font-semibold text-h3 mb-4 text-primary-red">
+                            <div className="bg-white p-6 rounded-lg shadow-sm">
+                                <h3 className="font-poppins font-semibold text-h3 mb-3 text-primary-red">
                                     Dubied - 12gg
                                 </h3>
                                 <p className="font-poppins font-normal text-sub text-gray-700">
@@ -210,12 +210,12 @@ const MadeInLondon = () => {
                         </div>
 
                         {/* Linking Machines */}
-                        <h3 className="font-poppins font-semibold text-h3 mb-6 text-center text-primary-dark-red mt-12">
+                        <h3 className="font-poppins font-semibold text-h3 mb-6 text-center text-primary-dark-red mt-10">
                             LINKING MACHINES
                         </h3>
-                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-                            <div className="bg-white p-8 shadow-sm">
-                                <h3 className="font-poppins font-semibold text-h3 mb-4 text-primary-red">
+                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+                            <div className="bg-white p-6 rounded-lg shadow-sm">
+                                <h3 className="font-poppins font-semibold text-h3 mb-3 text-primary-red">
                                     Complett - 12gg
                                 </h3>
                                 <p className="font-poppins font-normal text-sub text-gray-700">
@@ -223,8 +223,8 @@ const MadeInLondon = () => {
                                 </p>
                             </div>
 
-                            <div className="bg-white p-8 shadow-sm">
-                                <h3 className="font-poppins font-semibold text-h3 mb-4 text-primary-red">
+                            <div className="bg-white p-6 rounded-lg shadow-sm">
+                                <h3 className="font-poppins font-semibold text-h3 mb-3 text-primary-red">
                                     Complett - 7gg
                                 </h3>
                                 <p className="font-poppins font-normal text-sub text-gray-700">
@@ -232,8 +232,8 @@ const MadeInLondon = () => {
                                 </p>
                             </div>
 
-                            <div className="bg-white p-8 shadow-sm">
-                                <h3 className="font-poppins font-semibold text-h3 mb-4 text-primary-red">
+                            <div className="bg-white p-6 rounded-lg shadow-sm">
+                                <h3 className="font-poppins font-semibold text-h3 mb-3 text-primary-red">
                                     Complett - 5gg
                                 </h3>
                                 <p className="font-poppins font-normal text-sub text-gray-700">
@@ -241,8 +241,8 @@ const MadeInLondon = () => {
                                 </p>
                             </div>
 
-                            <div className="bg-white p-8 shadow-sm">
-                                <h3 className="font-poppins font-semibold text-h3 mb-4 text-primary-red">
+                            <div className="bg-white p-6 rounded-lg shadow-sm">
+                                <h3 className="font-poppins font-semibold text-h3 mb-3 text-primary-red">
                                     Exacta - 3gg
                                 </h3>
                                 <p className="font-poppins font-normal text-sub text-gray-700">
@@ -252,12 +252,12 @@ const MadeInLondon = () => {
                         </div>
 
                         {/* Equipment & Software */}
-                        <h3 className="font-poppins font-semibold text-h3 mb-6 text-center text-primary-dark-red mt-12">
+                        <h3 className="font-poppins font-semibold text-h3 mb-6 text-center text-primary-dark-red mt-10">
                             EQUIPMENT & SOFTWARE
                         </h3>
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            <div className="bg-white p-8 shadow-sm">
-                                <h3 className="font-poppins font-semibold text-h3 mb-4 text-primary-red">
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div className="bg-white p-6 rounded-lg shadow-sm">
+                                <h3 className="font-poppins font-semibold text-h3 mb-3 text-primary-red">
                                     Industrial Washer & Dryer
                                 </h3>
                                 <p className="font-poppins font-normal text-sub text-gray-700">
@@ -265,8 +265,8 @@ const MadeInLondon = () => {
                                 </p>
                             </div>
 
-                            <div className="bg-white p-8 shadow-sm">
-                                <h3 className="font-poppins font-semibold text-h3 mb-4 text-primary-red">
+                            <div className="bg-white p-6 rounded-lg shadow-sm">
+                                <h3 className="font-poppins font-semibold text-h3 mb-3 text-primary-red">
                                     Corghi Cone Winder
                                 </h3>
                                 <p className="font-poppins font-normal text-sub text-gray-700">
@@ -274,8 +274,8 @@ const MadeInLondon = () => {
                                 </p>
                             </div>
 
-                            <div className="bg-white p-8 shadow-sm">
-                                <h3 className="font-poppins font-semibold text-h3 mb-4 text-primary-red">
+                            <div className="bg-white p-6 rounded-lg shadow-sm">
+                                <h3 className="font-poppins font-semibold text-h3 mb-3 text-primary-red">
                                     Industrial Iron & Press
                                 </h3>
                                 <p className="font-poppins font-normal text-sub text-gray-700">
@@ -283,8 +283,8 @@ const MadeInLondon = () => {
                                 </p>
                             </div>
 
-                            <div className="bg-white p-8 shadow-sm">
-                                <h3 className="font-poppins font-semibold text-h3 mb-4 text-primary-red">
+                            <div className="bg-white p-6 rounded-lg shadow-sm">
+                                <h3 className="font-poppins font-semibold text-h3 mb-3 text-primary-red">
                                     Sewing & Overlocker
                                 </h3>
                                 <p className="font-poppins font-normal text-sub text-gray-700">
@@ -292,8 +292,8 @@ const MadeInLondon = () => {
                                 </p>
                             </div>
 
-                            <div className="bg-white p-8 shadow-sm">
-                                <h3 className="font-poppins font-semibold text-h3 mb-4 text-primary-red">
+                            <div className="bg-white p-6 rounded-lg shadow-sm">
+                                <h3 className="font-poppins font-semibold text-h3 mb-3 text-primary-red">
                                     Shima Apex 3
                                 </h3>
                                 <p className="font-poppins font-normal text-sub text-gray-700">
@@ -301,8 +301,8 @@ const MadeInLondon = () => {
                                 </p>
                             </div>
 
-                            <div className="bg-white p-8 shadow-sm">
-                                <h3 className="font-poppins font-semibold text-h3 mb-4 text-primary-red">
+                            <div className="bg-white p-6 rounded-lg shadow-sm">
+                                <h3 className="font-poppins font-semibold text-h3 mb-3 text-primary-red">
                                     Stoll M1plus
                                 </h3>
                                 <p className="font-poppins font-normal text-sub text-gray-700">
@@ -317,27 +317,27 @@ const MadeInLondon = () => {
             {/* Location */}
             <section className="py-20 bg-primary-dark-red text-white">
                 <div className="container mx-auto px-4 text-center">
-                    <h2 className="font-poppins font-light text-h2 leading-[32pt] tracking-[-0.02em] mb-6">
+                    <h2 className="font-poppins font-light text-h2 mb-6">
                         Visit Our London Facility
                     </h2>
-                    <p className="font-poppins font-normal text-body leading-[13pt] tracking-[0.01em] max-w-2xl mx-auto mb-8">
+                    <p className="font-poppins font-normal text-body max-w-2xl mx-auto mb-8">
                         Unit 5, Leyton Studios<br />
                         15 Argall Avenue<br />
                         London, E10 7QE, United Kingdom
                     </p>
-                    <p className="font-poppins font-normal text-body leading-[13pt] tracking-[0.01em] mb-10">
+                    <p className="font-poppins font-normal text-body mb-10">
                         Contact us to schedule a visit and see our production process firsthand.
                     </p>
                     <a
                         href="mailto:knit@knitster-ldn.com"
-                        className="inline-block px-8 py-4 bg-primary-red text-white hover:bg-pink-600 transition-colors duration-300 font-poppins font-semibold text-h3"
+                        className="inline-block px-8 py-4 bg-primary-red text-white hover:bg-pink-600 transition-colors duration-300 font-poppins font-semibold text-h3 rounded-lg"
                     >
                         Email Us
                     </a>
-            </div>
-        </section>
-</Layout>
-);
+                </div>
+            </section>
+        </Layout>
+    );
 };
 
 export default MadeInLondon;

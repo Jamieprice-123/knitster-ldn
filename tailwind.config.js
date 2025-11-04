@@ -1,31 +1,27 @@
-﻿/** @type {import('tailwindcss').Config} */
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
+    "./public/index.html",
   ],
   theme: {
     extend: {
       colors: {
-        primary: {
-          red: '#fc1048',
-          'dark-red': '#90172a',
-        },
-        background: {
-          'cool-blue': '#c2d7e1',
-        },
-        accent: {
-          'powder-green': '#cfdacc',
-        },
+        'primary-red': '#fc1048',
+        'primary-dark-red': '#8b1538',
+        'background-cool-blue': '#FADADD',
+        'accent-powder-green': '#FADADD',
       },
       fontFamily: {
-        poppins: ['Poppins', 'sans-serif'],
+        'poppins': ['Poppins', 'sans-serif'],
       },
       fontSize: {
-        'h1': ['50pt', { lineHeight: '60pt', letterSpacing: '-0.02em' }],
-        'h2': ['50pt', { lineHeight: '32pt', letterSpacing: '-0.02em' }],
-        'h3': ['12pt', { lineHeight: '15pt', letterSpacing: '0' }],
-        'body': ['9pt', { lineHeight: '13pt', letterSpacing: '0.01em' }],
-        'sub': ['7pt', { lineHeight: '11pt', letterSpacing: '0.02em' }],
+        // More consistent font sizing system
+        'h1': ['48px', { lineHeight: '56px', letterSpacing: '-0.02em', fontWeight: '300' }],
+        'h2': ['32px', { lineHeight: '40px', letterSpacing: '-0.02em', fontWeight: '300' }],
+        'h3': ['18px', { lineHeight: '24px', fontWeight: '600' }],
+        'body': ['16px', { lineHeight: '24px', letterSpacing: '0.01em', fontWeight: '400' }],
+        'sub': ['14px', { lineHeight: '20px', fontWeight: '400' }],
       },
     },
   },

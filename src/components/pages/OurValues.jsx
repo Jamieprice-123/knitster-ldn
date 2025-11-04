@@ -16,20 +16,20 @@ const OurValues = () => {
                     className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                    <h1 className="font-poppins font-light text-h1 leading-[60pt] tracking-[-0.02em] text-white text-center px-4">
+                    <h1 className="font-poppins font-light text-h1 text-white text-center px-4">
                         OUR VALUES
                     </h1>
                 </div>
             </section>
 
             {/* Mission Statement */}
-            <section className="py-24 bg-white">
+            <section className="py-20 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto text-center">
-                        <h2 className="font-poppins font-light text-h2 leading-[32pt] tracking-[-0.02em] mb-12 text-primary-dark-red">
+                        <h2 className="font-poppins font-light text-h2 mb-8 text-primary-dark-red">
                             OUR MISSION
                         </h2>
-                        <div className="font-poppins font-normal text-body leading-[13pt] tracking-[0.01em]">
+                        <div className="font-poppins font-normal text-body">
                             <p className="mb-6">
                                 Established in 2013, Knitster LDN was founded with a clear mission: to produce exceptional quality knitwear with
                                 a focus on craftsmanship, innovation, and sustainability.
@@ -48,14 +48,14 @@ const OurValues = () => {
             </section>
 
             {/* Core Values */}
-            <section className="py-24 bg-background-cool-blue">
+            <section className="py-20 bg-background-cool-blue">
                 <div className="container mx-auto px-4">
-                    <h2 className="font-poppins font-light text-h2 leading-[32pt] tracking-[-0.02em] text-center mb-16 text-primary-dark-red">
+                    <h2 className="font-poppins font-light text-h2 text-center mb-12 text-primary-dark-red">
                         WHAT WE STAND FOR
                     </h2>
 
-                    <div className="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
-                        <div className="text-center">
+                    <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                        <div className="text-center bg-white p-6 rounded-lg">
                             <div className="mb-6 flex justify-center">
                                 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="32" cy="32" r="32" fill="#cfdacc"/>
@@ -63,13 +63,13 @@ const OurValues = () => {
                                 </svg>
                             </div>
                             <h3 className="font-poppins font-semibold text-h3 mb-4 text-primary-red">BRITISH MANUFACTURING</h3>
-                            <p className="font-poppins font-normal text-body leading-[13pt] tracking-[0.01em] text-gray-700">
+                            <p className="font-poppins font-normal text-body text-gray-700">
                                 We're proud to be part of the British supply chain, supporting local industry and championing
                                 UK wool while reducing our carbon footprint.
                             </p>
                         </div>
 
-                        <div className="text-center">
+                        <div className="text-center bg-white p-6 rounded-lg">
                             <div className="mb-6 flex justify-center">
                                 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="32" cy="32" r="32" fill="#cfdacc"/>
@@ -77,13 +77,13 @@ const OurValues = () => {
                                 </svg>
                             </div>
                             <h3 className="font-poppins font-semibold text-h3 mb-4 text-primary-red">PRECISION & QUALITY</h3>
-                            <p className="font-poppins font-normal text-body leading-[13pt] tracking-[0.01em] text-gray-700">
+                            <p className="font-poppins font-normal text-body text-gray-700">
                                 Using both Shima and Stoll technology, we combine precision manufacturing with exceptional
                                 craftsmanship to deliver consistent, high-quality results.
                             </p>
                         </div>
 
-                        <div className="text-center">
+                        <div className="text-center bg-white p-6 rounded-lg">
                             <div className="mb-6 flex justify-center">
                                 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <circle cx="32" cy="32" r="32" fill="#cfdacc"/>
@@ -91,7 +91,7 @@ const OurValues = () => {
                                 </svg>
                             </div>
                             <h3 className="font-poppins font-semibold text-h3 mb-4 text-primary-red">SUSTAINABLE PRACTICES</h3>
-                            <p className="font-poppins font-normal text-body leading-[13pt] tracking-[0.01em] text-gray-700">
+                            <p className="font-poppins font-normal text-body text-gray-700">
                                 From fiber selection to finished product, we prioritize natural, recyclable materials and
                                 ethical production methods that benefit people and planet.
                             </p>
@@ -101,15 +101,15 @@ const OurValues = () => {
             </section>
 
             {/* Knitstory - Founders Section */}
-            <section className="py-24 bg-white">
+            <section className="py-20 bg-white">
                 <div className="container mx-auto px-4">
-                    <h2 className="font-poppins font-light text-h2 leading-[32pt] tracking-[-0.02em] text-center mb-16 text-primary-dark-red">
+                    <h2 className="font-poppins font-light text-h2 text-center mb-12 text-primary-dark-red">
                         MEET THE FOUNDERS
                     </h2>
-                    <div className="grid md:grid-cols-2 gap-16 max-w-5xl mx-auto">
+                    <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
                         {/* Aysen */}
-                        <div>
-                            <div className="relative overflow-hidden mb-8 aspect-[3/4]">
+                        <div className="bg-accent-powder-green p-6 rounded-lg">
+                            <div className="relative overflow-hidden mb-6 aspect-[3/4] rounded-lg">
                                 <img
                                     src="/images/aysen-portrait.jpg"
                                     alt="Aysen Bayram"
@@ -118,7 +118,7 @@ const OurValues = () => {
                             </div>
                             <h3 className="font-poppins font-semibold text-h3 mb-2">Aysen Bayram</h3>
                             <p className="font-poppins font-normal text-body text-primary-red mb-4">Co-Founder & Creative Director</p>
-                            <p className="font-poppins font-normal text-body leading-[13pt] tracking-[0.01em] text-gray-700">
+                            <p className="font-poppins font-normal text-body text-gray-700">
                                 Born in London's East End to Turkish-Cypriot parents, Aysen draws both inspiration and
                                 energy from her native city. After studying Fashion with textiles at Ravensbourne and
                                 working for Ally Capellino and Tommy Hilfiger, she established Knitster LDN in 2013.
@@ -127,8 +127,8 @@ const OurValues = () => {
                         </div>
 
                         {/* Emma */}
-                        <div>
-                            <div className="relative overflow-hidden mb-8 aspect-[3/4]">
+                        <div className="bg-accent-powder-green p-6 rounded-lg">
+                            <div className="relative overflow-hidden mb-6 aspect-[3/4] rounded-lg">
                                 <img
                                     src="/images/emma-portrait.jpg"
                                     alt="Emma McClelland"
@@ -137,7 +137,7 @@ const OurValues = () => {
                             </div>
                             <h3 className="font-poppins font-semibold text-h3 mb-2">Emma McClelland</h3>
                             <p className="font-poppins font-normal text-body text-primary-red mb-4">Co-Founder & Design Director</p>
-                            <p className="font-poppins font-normal text-body leading-[13pt] tracking-[0.01em] text-gray-700">
+                            <p className="font-poppins font-normal text-body text-gray-700">
                                 Dublin-born Emma's passion for textiles began watching her mother craft traditional Aran sweaters.
                                 After studying fashion design in Dublin and Milan, she worked for 8 years as an in-house
                                 knitwear designer at Marks & Spencer. Emma joined forces with Aysen to transform Knitster LDN

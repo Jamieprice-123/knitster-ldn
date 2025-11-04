@@ -10,11 +10,11 @@ const Layout = ({ children }) => {
   const navItems = [
     { name: 'Design & Development', path: '/design-development', color: 'text-primary-red' },
     { name: 'Portfolio', path: '/portfolio', color: 'text-primary-dark-red' },
-    { name: 'Made In London', path: '/made-in-london', color: 'text-background-cool-blue' },
-    { name: 'Overseas Production', path: '/overseas-production', color: 'text-accent-powder-green' },
+    { name: 'Made In London', path: '/made-in-london', color: 'text-primary-red' },
+    { name: 'Overseas Production', path: '/overseas-production', color: 'text-primary-dark-red' },
     { name: 'Knit Store', path: '/knit-store', color: 'text-primary-red' },
     { name: 'Our Values', path: '/our-values', color: 'text-primary-dark-red' },
-    { name: 'Contact', path: '/contact', color: 'text-background-cool-blue' }
+    { name: 'Contact', path: '/contact', color: 'text-primary-red' }
   ];
 
   useEffect(() => {
@@ -37,22 +37,22 @@ const Layout = ({ children }) => {
         <header className={`fixed w-full z-50 transition-all duration-300 ${
             scrolled ? 'bg-white shadow-md' : 'bg-transparent'
         }`}>
-          <div className="container mx-auto px-6 py-6">
+          <div className="container mx-auto px-4 py-4">
             <div className="flex justify-between items-center">
-              {/* Logo */}
-              <div>
+              {/* Logo - aligned to the left */}
+              <div className="flex-shrink-0">
                 <Link to="/">
                   <img src="/images/logo.png" alt="Knitster LDN" className="h-16" />
                 </Link>
               </div>
 
               {/* Navigation */}
-              <nav className="hidden lg:flex items-center space-x-8">
+              <nav className="hidden lg:flex items-center space-x-6">
                 {navItems.map((item) => (
                     <Link
                         key={item.path}
                         to={item.path}
-                        className={`font-poppins font-semibold text-h3 leading-[15pt] transition-colors ${
+                        className={`font-poppins font-semibold text-h3 transition-colors ${
                             location.pathname === item.path
                                 ? item.color
                                 : scrolled
@@ -79,7 +79,7 @@ const Layout = ({ children }) => {
             </div>
 
             {/* Mobile Navigation */}
-            <nav className="lg:hidden mt-4 pb-4 space-y-3">
+            <nav className="lg:hidden mt-4 pb-4 space-y-2">
               {navItems.map((item) => (
                   <Link
                       key={item.path}
