@@ -29,10 +29,10 @@ const Contact = () => {
               <p>London, E10 7QE, United Kingdom</p>
             </div>
             <a
-              href="tel:+442089881768"
+              href="tel:+447449631180"
               className="text-lg text-blue-600 hover:text-blue-700 transition-colors block"
             >
-              +44 (0) 208 988 1768
+              +44 7449 631180
             </a>
           </div>
 

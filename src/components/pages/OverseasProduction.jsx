@@ -15,6 +15,8 @@ const OverseasProduction = () => {
                     alt="Overseas Production"
                     className="absolute inset-0 w-full h-full object-cover"
                 />
+                {/* Dark gradient overlay for navbar contrast */}
+                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent"></div>
                 <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
                     <h1 className="font-poppins font-light text-h1 leading-[60pt] tracking-[-0.02em] text-white text-center px-4">
                         OVERSEAS PRODUCTION
@@ -27,10 +29,7 @@ const OverseasProduction = () => {
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto text-center">
                         <h2 className="font-poppins font-light text-h2 leading-[32pt] tracking-[-0.02em] mb-12 text-primary-dark-red">
-                            SCALABLE PRODUCTION
-                        </h2>
-                        <h2 className="font-poppins font-light text-h2 leading-[32pt] tracking-[-0.02em] mb-12 text-primary-dark-red">
-                            SOLUTIONS
+                            SCALABLE PRODUCTION SOLUTIONS
                         </h2>
                         <div className="font-poppins font-normal text-body leading-[13pt] tracking-[0.01em]">
                             <p className="mb-6">

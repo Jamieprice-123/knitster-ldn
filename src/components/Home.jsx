@@ -9,6 +9,8 @@ const Home = () => {
         <Layout>
             <section className="h-screen relative">
                 <img src="/images/Home-Page.JPG" alt="Hero" className="w-full h-full object-cover" />
+                {/* Dark gradient overlay for navbar contrast */}
+                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-transparent"></div>
                 <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                     <div className="text-center text-white">
                         <div

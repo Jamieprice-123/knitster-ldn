@@ -40,6 +40,8 @@ const ContactPage = () => {
                     alt="Contact"
                     className="absolute inset-0 w-full h-full object-cover"
                 />
+                {/* Dark gradient overlay for navbar contrast */}
+                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent"></div>
                 <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
                     <h1 className="font-poppins font-light text-h1 leading-[60pt] tracking-[-0.02em] text-white text-center px-4">
                         CONTACT US
@@ -162,10 +164,10 @@ const ContactPage = () => {
                                 <p>London, E10 7QE, United Kingdom</p>
                             </div>
                             <a
-                                href="tel:+442089881768"
+                                href="tel:+447449631180"
                                 className="block font-poppins font-normal text-body text-primary-red hover:text-primary-dark-red transition-colors"
                             >
-                                +44 (0) 208 988 1768
+                                +44 7449 631180
                             </a>
                         </div>
 

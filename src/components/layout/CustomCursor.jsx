@@ -4,7 +4,7 @@ const CustomCursor = () => {
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [trail, setTrail] = useState([]);
     const [isVisible, setIsVisible] = useState(false);
-    const maxTrailPoints = 5; // Shorter trail length
+    const maxTrailPoints = 3; // Reduced trail length for better performance
 
     useEffect(() => {
         const updateCursorPosition = (e) => {
@@ -15,11 +15,9 @@ const CustomCursor = () => {
                 setIsVisible(true);
             }
 
-            // Update trail points
+            // Update trail points with throttling
             setTrail(prevTrail => {
-                // Add new point
                 const newPoint = { x: e.clientX, y: e.clientY, id: Date.now() };
-                // Keep only the most recent points
                 return [...prevTrail, newPoint].slice(-maxTrailPoints);
             });
         };
@@ -76,12 +74,11 @@ const CustomCursor = () => {
                         d={pathData}
                         fill="none"
                         stroke="#FF69B4"
-                        strokeWidth="4"
+                        strokeWidth="3"
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         style={{
-                            opacity: 0.75,
-                            filter: 'drop-shadow(0 0 2px rgba(255, 105, 180, 0.5))'
+                            opacity: 0.6
                         }}
                     />
                 </svg>

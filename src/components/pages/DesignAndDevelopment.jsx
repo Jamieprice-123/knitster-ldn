@@ -15,6 +15,8 @@ const DesignAndDevelopment = () => {
                     alt="Design & Development"
                     className="absolute inset-0 w-full h-full object-cover"
                 />
+                {/* Dark gradient overlay for navbar contrast */}
+                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent"></div>
                 <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
                     <h1 className="font-poppins font-light text-h1 text-white text-center px-4">
                         DESIGN & DEVELOPMENT
@@ -62,7 +64,7 @@ const DesignAndDevelopment = () => {
                     </h2>
 
                     <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                        <div className="bg-white p-8 rounded-lg shadow-sm transform hover:-translate-y-2 transition-transform duration-300">
+                        <div className="bg-white p-8 rounded-lg shadow-sm">
                             <h3 className="font-poppins font-semibold text-h3 mb-4 text-primary-red">
                                 DESIGN CONSULTATION
                             </h3>
@@ -78,7 +80,7 @@ const DesignAndDevelopment = () => {
                             </ul>
                         </div>
 
-                        <div className="bg-white p-8 rounded-lg shadow-sm transform hover:-translate-y-2 transition-transform duration-300">
+                        <div className="bg-white p-8 rounded-lg shadow-sm">
                             <h3 className="font-poppins font-semibold text-h3 mb-4 text-primary-red">
                                 SAMPLING & PROTOTYPING
                             </h3>
@@ -94,7 +96,7 @@ const DesignAndDevelopment = () => {
                             </ul>
                         </div>
 
-                        <div className="bg-white p-8 rounded-lg shadow-sm transform hover:-translate-y-2 transition-transform duration-300">
+                        <div className="bg-white p-8 rounded-lg shadow-sm">
                             <h3 className="font-poppins font-semibold text-h3 mb-4 text-primary-red">
                                 TECHNICAL DEVELOPMENT
                             </h3>
@@ -110,7 +112,7 @@ const DesignAndDevelopment = () => {
                             </ul>
                         </div>
 
-                        <div className="bg-white p-8 rounded-lg shadow-sm transform hover:-translate-y-2 transition-transform duration-300">
+                        <div className="bg-white p-8 rounded-lg shadow-sm">
                             <h3 className="font-poppins font-semibold text-h3 mb-4 text-primary-red">
                                 FULL PRODUCTION MANAGEMENT
                             </h3>
